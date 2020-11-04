@@ -1,7 +1,7 @@
 #!/bin/bash
 
-config(){
-    echo -e "${GREEN}Configuring System${YELLOW}"
+postconfig(){
+    echo -e "${GREEN}Post-Configuration${YELLOW}"
     echo -e ""
 
     echo -e "${GREEN}Disabling Wayland${YELLOW}"
@@ -25,7 +25,7 @@ config(){
     echo -e "PATH=\"${PATH}\":$(find "$TOOLS"/* | tr "\\n" ":" | sed "s/:$//")" >> "$ZSHRC"
     echo -e ""
 
-    echo -e "${GREEN}Finished Configuring System"
+    echo -e "${GREEN}Finished Post-Configuration"
     echo -e ""
     
     return 0

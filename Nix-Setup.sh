@@ -48,14 +48,8 @@ fi
 sudo apt -q update
 echo -e ""
 
-# Link Python3/Pip3 to Python/Pip command
-echo -e "${GREEN}Linking Python3/Pip3 to Python/Pip${YELLOW}"
-sudo rm /usr/bin/python
-sudo ln -s /usr/bin/python3 /usr/bin/python
-sudo apt-get install -y -qq python3-pip  > /dev/null
-sudo rm /usr/bin/pip
-sudo ln -s /usr/bin/pip3 /usr/bin/pip
-echo -e ""
+# Preconfig
+preconfig
 
 # Install Tools
 ohmyzsh
@@ -74,8 +68,8 @@ flameshot
 #     :
 # fi
 
-# System Config
-config
+# Postconfig
+postconfig
 
 # Complete
 echo -e "${GREEN}Nix-Setup complete, reboot to complete now or run 'source ~/.zshrc' until next reboot."
