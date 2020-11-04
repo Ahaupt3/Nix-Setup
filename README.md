@@ -29,6 +29,8 @@
 > - Finish System Config script
 >   - Add system keyboard shortcuts
 >   - Add nautilus preferences
+> - Update Tools dir
+>   - Copy primary script & symlin `cp ~/Tools/<dir>/<script> /usr/local/bin/<script - extension> && ln /usr/local/bin/<script> ~/Tools/<dir>/<script>`
 > - Update VS Code
 >   - Add extensions
 >   - Add editor prefs
