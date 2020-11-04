@@ -24,9 +24,9 @@ fi
 # Check what Distro
 for OS in $(lsb_release -i | grep ID | cut -d ":" -f 2); do
     if [[ "$OS" == @(Ubuntu|Kali) ]]; then
-        echo -e "${GREEN}OS is: $OS"
+        echo -e "${GREEN}OS: $OS"
     else
-        echo -e "${GREEN}OS is: ${YELLOW}$OS"
+        echo -e "${GREEN}OS: ${YELLOW}$OS"
     fi
 done
 echo -e ""
