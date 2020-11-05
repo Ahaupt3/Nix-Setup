@@ -1,6 +1,6 @@
 # Nix-Setup
 
-> My automated setup scripts for freshly installed NIX machines.
+> My automated setup scripts for freshly installed NIX machines. Primarily intended for use with Ubuntu & Kali machines, use at your own discretion.
 
 ## Tools Installed & Configurations
 
@@ -23,6 +23,11 @@
 
 > TODO: Add any additional tasks after running Setup script
 > - Reboot machine to finish disabling Wayland
+
+## STATUS:
+
+> - Kali 2020.3: Working
+> - Ubuntu 20.04: Not Tested
 
 ## TODO:
 
