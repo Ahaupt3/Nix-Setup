@@ -19,6 +19,7 @@ done
 if [[ ! $(whoami) == root ]]; then
     echo -e "${YELLOW}This script must be run as root!" 
     sudo ls > /dev/null
+    echo -e ""
 fi
 
 # Check what Distro
@@ -38,14 +39,6 @@ for DIR in "${DIRS[@]}"; do
         mkdir -p "$DIR" || exit
     fi
 done
-echo -e ""
-
-# Update Packages
-echo -e "${GREEN}Updating Packages${YELLOW}"
-if [[ "$OS" == Ubuntu ]]; then
-    sudo add-apt-repository universe
-fi
-sudo apt -q update
 echo -e ""
 
 # Preconfig
