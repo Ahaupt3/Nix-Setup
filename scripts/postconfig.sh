@@ -20,6 +20,10 @@ postconfig(){
     #     :
     # fi
 
+    echo -e "${GREEN}Purging unused packages${YELLOW}"
+    sudo apt purge --autoremove -y
+    echo -e ""
+
     echo -e "${GREEN}Updating PATH${YELLOW}"
     echo -e "\n# Add to PATH" >> "$ZHSRC"
     echo -e "PATH=\"${PATH}\":$(find "$TOOLS"/* | tr "\\n" ":" | sed "s/:$//")" >> "$ZSHRC"
