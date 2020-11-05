@@ -1,9 +1,20 @@
 #!/bin/bash
 
+# Variables
+CMDS=(curl git)
+
 preconfig(){
     echo -e "${GREEN}Pre-Configuration"
     echo -e ""
 
+    echo -e "${GREEN}Checking for commands - installing if not found${YELLOW}"
+    for CMD in "${CMDS[@]}"; do
+        echo -e "${YELLOW}Looking for $CMD"
+        which "$CMD" > /dev/null || sudo apt-get install -y -qq "$CMD" > /dev/null
+    done
+    echo -e "${GREEN}All necessary commands are installed"
+    echo -e ""
+    
     echo -e "${GREEN}Linking Python3/Pip3 to Python/Pip${YELLOW}"
     if [ "$(realpath "$(which python)")" = "$(realpath "$(which python3)")" ]; then
         :
