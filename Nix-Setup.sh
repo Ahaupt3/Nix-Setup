@@ -53,14 +53,6 @@ chrome
 code
 flameshot
 
-# if [[ $(lsb_release -i | grep ID | cut -d ":" -f 2) == Ubuntu ]]; then
-#     ubuntu
-# elif [[ $(lsb_release -i | grep ID | cut -d ":" -f 2) == Kali ]]; then
-#     kali
-# else
-#     :
-# fi
-
 # Postconfig
 postconfig
 
