@@ -16,7 +16,7 @@ for SCRIPT in scripts/*; do
 done
 
 # Check if Root
-if [[ $EUID -ne 0 ]]; then
+if [[ $(whoami) -ne root ]]; then
     echo -e "${YELLOW}This script must be run as root!" 
     sudo ls > /dev/null
 fi
