@@ -1,11 +1,9 @@
 #!/bin/bash
 
 ubuntu(){
-    echo -e "${GREEN}Installing Ubuntu Tools${YELLOW}"
-    echo -e ""
-
-    echo -e "${GREEN}Finished Installing Ubuntu Tools"
-    echo -e ""
+    echo -e "\n${GREEN}Installing Ubuntu Tools${YELLOW}"
     
+    echo -e "\n${GREEN}Finished Installing Ubuntu Tools"
+        
     return 0
 }

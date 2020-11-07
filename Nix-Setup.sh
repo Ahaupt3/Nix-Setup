@@ -19,27 +19,24 @@ done
 if [[ ! $(whoami) == root ]]; then
     echo -e "${YELLOW}This script must be run as root!" 
     sudo ls > /dev/null
-    echo -e ""
 fi
 
 # Check what Distro
 for OS in $(lsb_release -i | grep ID | cut -d ":" -f 2); do
     if [[ "$OS" == @(Ubuntu|Kali) ]]; then
-        echo -e "${GREEN}OS: $OS"
+        echo -e "\n${GREEN}OS: $OS"
     else
-        echo -e "${GREEN}OS: ${YELLOW}$OS"
+        echo -e "\n${GREEN}OS: ${YELLOW}$OS"
     fi
 done
-echo -e ""
 
 # Setup DIRS
-echo -e "${GREEN}Creating Directories${YELLOW}"
+echo -e "\n${GREEN}Creating Directories${YELLOW}"
 for DIR in "${DIRS[@]}"; do
     if [ ! -d "$DIR" ]; then
         mkdir -p "$DIR" || exit
     fi
 done
-echo -e ""
 
 # Preconfig
 preconfig
@@ -57,7 +54,7 @@ flameshot
 postconfig
 
 # Complete
-echo -e "${GREEN}Nix-Setup complete, reboot to complete now or run 'source ~/.zshrc' until next reboot."
+echo -e "\n${GREEN}Nix-Setup complete, reboot to complete now or run 'source ~/.zshrc' until next reboot."
 sudo chsh -s "$(which zsh)" "$USER"
 
 exit 0

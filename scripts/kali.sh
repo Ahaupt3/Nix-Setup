@@ -1,11 +1,9 @@
 #!/bin/bash
 
 kali(){
-    echo -e "${GREEN}Installing Kali Tools${YELLOW}"
-    echo -e ""
-
-    echo -e "${GREEN}Finished Installing Kali Tools"
-    echo -e ""
+    echo -e "\n${GREEN}Installing Kali Tools${YELLOW}"
     
+    echo -e "\n${GREEN}Finished Installing Kali Tools"
+        
     return 0
 }
