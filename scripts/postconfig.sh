@@ -25,8 +25,8 @@ postconfig(){
     echo -e ""
 
     echo -e "${GREEN}Updating PATH${YELLOW}"
-    echo -e "\n# Add to PATH" >> "$ZHSRC"
-    echo -e "PATH=\"${PATH}\":$(find "$TOOLS"/* | tr "\\n" ":" | sed "s/:$//")" >> "$ZSHRC"
+    echo -e "\n# Add to PATH" >> "$ZSHRC"
+    echo -e 'export PATH="${PATH}":$(ls -d ~/Tools/* | tr "\\n" ":" | sed "s/:$//")' >> $ZSHRC
     echo -e ""
 
     echo -e "${GREEN}Finished Post-Configuration"
