@@ -4,7 +4,7 @@ postconfig(){
     echo -e "\n${GREEN}Post-Configuration${YELLOW}"
     
     echo -e "\n${GREEN}Disabling Wayland${YELLOW}"
-    sudo sed -i "s/\#Wayland/Wayland/" /etc/gdm3/custom.conf > /dev/null || sudo sed -i "s/\#Wayland/Wayland/" /etc/gdm3/daemon.conf > /dev/null
+    sudo sed -i "s/\#Wayland/Wayland/" /etc/gdm3/custom.conf > /dev/null 2>&1 || sudo sed -i "s/\#Wayland/Wayland/" /etc/gdm3/daemon.conf > /dev/null 2>&1
     
     # Set Nautilus settings
     # - gsettings list-keys org.gnome.Terminal.ProfilesList
