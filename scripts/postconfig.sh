@@ -22,6 +22,8 @@ postconfig(){
     sudo apt purge --autoremove -y
     
     echo -e "\n${GREEN}Updating PATH${YELLOW}"
+    echo -e "\n# Custom Aliases" >> "$ZSHRC"
+    echo -e 'alias pyserve="sudo python3 -m http.server 80"' >> "$ZSHRC"
     echo -e "\n# Add to PATH" >> "$ZSHRC"
     echo -e 'export PATH="${PATH}":$(ls -d ~/Tools/* | tr "\\n" ":" | sed "s/:$//")' >> $ZSHRC
     
