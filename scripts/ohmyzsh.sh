@@ -5,6 +5,9 @@ ZSHPLUGINS=~/.oh-my-zsh/custom/plugins
 ZSHRC=~/.zshrc
 
 ohmyzsh(){
+    echo -e "\n${GREEN}Checking if ZSH installed${YELLOW}"
+    which zsh > /dev/null || sudo apt-get install -y -qq zsh > /dev/null
+
     echo -e "\n${GREEN}Installing Oh My Zsh${YELLOW}"
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
     
