@@ -38,8 +38,8 @@
 
 ## System Configurations
 
-> - Disable Wayland - to fix issues w/ VMware freezing
-> - Update PATH - to
+> - Disable Wayland - fix issues w/ VMware freezing
+> - Update PATH
 >   - Add directories in `~/Tools`
 >   - Add pyserve alias (`sudo python3 -m http.server 80`)
 
